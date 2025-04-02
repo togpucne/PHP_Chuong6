@@ -24,14 +24,11 @@
                             include './controller/xuLyDangXuat.php';
                             break;
             case 'thongtindathang':
-                                include './view/thongtindathang.php';
-                                break;
+                        include './view/thongtindathang.php';
+                        break;
             case 'themgiohang':
-                                    include './controller/themgiohang.php';
-                                    break;
-            case 'gioHang':
-                    include './view/giohang.php';
-                    break;
+                        include './controller/themgiohang.php';
+                        break;
             default:
                 include './view/trangchu.php';
                 break;
