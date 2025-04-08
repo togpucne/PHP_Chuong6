@@ -18,7 +18,7 @@ include './view/menu.php';
         }
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo '<form action="index.php?act=thongtindathang&idsp='.$row['idsp'].'" method="post">';
+                echo '<form action="index.php?act=themgiohang" method="post">';  
                 echo '<div class="product-info">';
                 echo '<div class="inner-left">';
                 echo '<img src="' . $row['hinh'] . '" alt="' . $row['tensp'] . '">';
@@ -34,7 +34,7 @@ include './view/menu.php';
                 if (isset($_SESSION['logIn'])) {
                     echo '<input type="submit" value="Thêm vào giỏ hàng" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">';
                 } else {
-                    echo '<button type="button" onclick="requireLogin()" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">Thêm vào giỏ hàng</button>';
+                    echo '<button type="button" onclick="requireLogin()" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">Thêm giỏ hàng</button>';
                 }
 
                 echo '</div>';
