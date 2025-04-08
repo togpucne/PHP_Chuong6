@@ -35,17 +35,20 @@
             echo '<td>' . $row['tensp'] . '</td>';
             echo '<td>' . number_format($row['gia'], 0, ',', '.') . ' VND</td>';
             echo '<td>' . number_format($row['giamgia'], 0, ',', '.') . ' VND</td>';
-            echo '<td>' . $row['soluong'] . '</td>';
+            $id_input = 'qty_' . $row['idsp'];
+            echo '<td><input type="number" id="' . $id_input . '" name="soluong[' . $row['idsp'] . ']" value="' . $row['soluong'] . '" min="1" style="width:60px; padding:3px;"></td>';
+
             echo '<td>' . number_format($tongtien, 0, ',', '.') . ' VND</td>';
+          
             echo '<td>
-                <a href="index.php?act=suagiohang&idsp=' . $row['idsp'] . '" style="margin-right: 10px; text-decoration:none; color:blue;">Sửa</a>
-                <a href="index.php?act=xoagiohang&idsp=' . $row['idsp'] . '" onclick="return confirm(\'Bạn có chắc muốn xóa sản phẩm này không?\')" style="text-decoration:none; color:red;">Xóa</a>
-            </td>';
+                    <a href="#" onclick="capNhatSoLuong(' . $row['idsp'] . ')" class="btn btn-warning" style="text-decoration:none;">Cập nhật</a>
+                    <a href="index.php?act=xoagiohang&idsp=' . $row['idsp'] . '" class="btn btn-danger" onclick="return confirm(\'Bạn có chắc muốn xóa sản phẩm này không?\')">Xóa</a>
+                </td>';
 
             echo '</tr>';
         }
-
         echo '</table>';
+        echo '<center style="margin-top: 30px"><a href="index.php?act=thongtindathang" class="btn btn-success" )">Đặt hàng</a></center>';
     } else {
         echo '<p>Giỏ hàng của bạn đang trống.</p>';
     }
@@ -53,3 +56,13 @@
 </div>
 
 </main>
+<script>
+    function capNhatSoLuong(idsp) {
+        const input = document.getElementById('qty_' + idsp);
+        const soluong = input.value;
+
+        if (confirm("Bạn có chắc muốn cập nhật sản phẩm này không?")) {
+            window.location.href = `index.php?act=capnhat&idsp=${idsp}&soluong=${soluong}`;
+        }
+    }
+</script>

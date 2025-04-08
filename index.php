@@ -23,6 +23,19 @@
             case 'xuLyDangXuat':
                             include './controller/xuLyDangXuat.php';
                             break;
+            case 'xoagiohang':
+                include './controller/xoagiohang.php';
+                break;
+            case 'thongtindathang':
+                    include './view/thongtindathang.php';
+                    break;
+
+            case 'capnhat':
+                    include './controller/capnhat.php';
+                    break;
+            case 'suagiohang':
+                    include './controller/suagiohang.php';
+                    break;
         
             case 'themgiohang':
                         include './controller/themgiohang.php';
