@@ -30,26 +30,24 @@ include './view/menu.php';
                 echo '<p class="product-cost">Giá khuyến mãi: ' . $row['giamgia'] . ' VND</p>';
                 echo '<p class="product-discount">Giá gốc: ' . $row['gia'] . ' VND</p>';
                 echo '<p class="product-desc">' . $row['mota'] . '</p>';
-                
-                // Các input ẩn để xử lý ở PHP
-                echo '<input type="hidden" name="tensp" value="' . htmlspecialchars($row['tensp']) . '">';
+                                echo '<input type="hidden" name="tensp" value="' . htmlspecialchars($row['tensp']) . '">';
                 echo '<input type="hidden" name="gia" value="' . $row['gia'] . '">';
                 echo '<input type="hidden" name="giamgia" value="' . $row['giamgia'] . '">';
                 echo '<input type="hidden" name="hinh" value="' . $row['hinh'] . '">';
             
-                // Số lượng
+               
                 echo '<label for="soLuong">Số lượng: </label> &emsp;';
                 echo '<input type="number" id="soLuong" name="soLuong" value="1" min="1" style="padding: 5px; border-radius: 5px; border: 1px solid #ccc;"> </br></br>';
             
-                // Nút thêm vào giỏ hàng
+             
                 if (isset($_SESSION['logIn'])) {
                     echo '<input type="submit" value="Thêm vào giỏ hàng" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">';
                 } else {
                     echo '<button type="button" onclick="requireLogin()" style="padding: 8px; border-radius: 5px; border: 1px solid #ccc;">Thêm giỏ hàng</button>';
                 }
             
-                echo '</div>'; // inner-right
-                echo '</div>'; // product-info
+                echo '</div>'; 
+                echo '</div>'; 
             echo '</form>';
             
             }

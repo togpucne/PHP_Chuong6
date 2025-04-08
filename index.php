@@ -29,6 +29,9 @@
             case 'thongtindathang':
                     include './view/thongtindathang.php';
                     break;
+            case 'xuLyDatHang':
+                        include './controller/xuLyDatHang.php';
+                        break;
 
             case 'capnhat':
                     include './controller/capnhat.php';
