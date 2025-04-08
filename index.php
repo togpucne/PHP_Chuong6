@@ -27,6 +27,9 @@
             case 'themgiohang':
                         include './controller/themgiohang.php';
                         break;
+            case 'gioHang':
+                include './view/gioHang.php';
+                break;  
             default:
                 include './view/trangchu.php';
                 break;
