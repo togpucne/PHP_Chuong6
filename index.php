@@ -24,6 +24,9 @@
             case 'xuLyDangXuat':
                             include './controller/xuLyDangXuat.php';
                             break;
+            case 'quanLySanPham':
+                include './view/quanLySanPham.php';
+                break;
             case 'xoagiohang':
                 include './controller/xoagiohang.php';
                 break;

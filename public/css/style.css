@@ -154,3 +154,6 @@ main .inner-right .product a {
   color: #555;
   line-height: 1.5;
 }
+th, td{
+  border: 1px solid #000;
+}
