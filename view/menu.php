@@ -32,10 +32,11 @@
                         echo '<li><a href="index.php?act=dangky">Đăng Ký</a></li>
                                         <li><a href="index.php?act=dangnhap">Đăng Nhập</a></li>';
                     }
-                } else if (isset($_SESSION['logIn'])) {
+                } else if (isset($_SESSION['logIn']) && !isset($_SESSION['admin'])) {
                     echo '<li><a href="index.php?act=xuLyDangXuat">Đăng Xuất</a></li>';
 
                     echo '<li><a href="index.php?act=gioHang">Giỏ Hàng</a></li>';
+                    
 
                     if (!class_exists('cSanPham')) {
                         include './model/cSanPham.php';
@@ -52,6 +53,11 @@
                             echo '<li><a href="index.php?iddm=' . $row['iddm'] . '">' . $row['tendanhmuc'] . '</a></li>';
                         }
                     }
+                }else if(isset($_SESSION['admin'])){
+                    echo '<li><a href="index.php?act=xuLyDangXuat">Đăng Xuất</a></li>';
+                    echo '<li><a href="index.php?act=quanLySanPham">Quản lý sản phẩm</a></li>';
+                    
+
                 } else {
                     echo '<li><a href="index.php?act=dangky">Đăng Ký</a></li>
                             <li><a href="index.php?act=dangnhap">Đăng Nhập</a></li>';

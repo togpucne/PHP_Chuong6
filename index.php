@@ -14,6 +14,7 @@
             case 'trangchu':
                     include './view/trangchu.php';
                     break;
+        
             case 'xuLyDangKy':
                     include './controller/xuLyDangKy.php';
                     break;

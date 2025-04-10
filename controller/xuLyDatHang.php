@@ -41,7 +41,7 @@
     if(!$result1){
         echo '
         <script>alert("Lưu đặt hàng ko thành công");
-            // history.back();
+            history.back();
         </script>
         ';
         return;
@@ -49,7 +49,7 @@
     }else{
         echo '
         <script>alert("Đặt hàng thành công");
-            // history.back();
+            history.back();
         </script>
         ';
     }
@@ -59,7 +59,7 @@
     if(!$result2){
         echo '
         <script>alert("Đặt hàng chi tiết không thành công");
-            // history.back();
+            history.back();
         </script>
         ';
         return;
@@ -67,7 +67,7 @@
     }else{
         echo '
         <script>alert("Đặt hàng chi tiet thành công");
-            // history.back();
+            history.back();
         </script>
         ';
     }

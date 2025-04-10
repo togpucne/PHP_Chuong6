@@ -1,5 +1,14 @@
 <div class="inner-right">
     <?php
+        if(isset($_SESSION['admin'])){
+            echo '<center><h5>Chào mừng bạn đến trang Admin</h5></center>';
+            echo '</div>
+
+</main>
+';
+            return;
+
+        }
   
         echo '<center><h5>Danh Sách Sản Phẩm</h5></center>';
 
